@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #28a745;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: 20px;
+}
