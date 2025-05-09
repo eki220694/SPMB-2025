@@ -6,39 +6,42 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
+    padding-top: 90px; /* Untuk konten utama tidak tertutup header fixed */
 }
 
 .container {
     max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center; /* Teks ditengahkan */
+    padding: 15px 0;
 }
 
 /* Header */
 header {
-    background: #0073e6;
-    color: white;
-    padding: 10px 0;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
-    margin-right: 20px;
-}
-
-header h1 {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 1.5em;
-    margin: 0;
+    border-radius: 50%;
 }
 
 header nav ul {
@@ -48,13 +51,42 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #e6f7ff;
+    color: #0073e6;
+}
+
+/* Tombol Pendaftaran */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #0073e6;
+    box-shadow: 0 4px 6px rgba(0, 115, 230, 0.25);
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    border-color: #005bb5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 115, 230, 0.3);
+}
+
+/* Section */
+section {
+    padding: 60px 0;
 }
 
 /* Hero Section */
@@ -62,12 +94,13 @@ header nav ul li a:hover {
     background: #0073e6;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
-#hero h2 {
+#hero h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: white;
 }
 
 #hero p {
@@ -76,62 +109,207 @@ header nav ul li a:hover {
 }
 
 #hero .btn {
-    display: inline-block;
-    padding: 10px 20px;
     background: #ffd740;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    color: #333;
+    border-color: #ffd740;
 }
 
 #hero .btn:hover {
     background: #ffeb3b;
+    border-color: #ffeb3b;
+}
+
+/* About Section */
+#about {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0073e6;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #0073e6;
 }
 
 /* Registration Section */
 #registration {
-    padding: 50px 0;
+    background: #f4f4f9;
+    padding: 60px 0;
 }
 
-.registration-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+#registration ol {
+    padding-left: 20px;
+}
+
+#registration h3 {
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+#registration ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#registration .btn {
+    margin-top: 10px;
     margin-bottom: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.registration-card img {
-    width: 100px;
-    height: 100px;
-    background: #0073e6;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.registration-card ol {
-    list-style-type: decimal;
-}
-
-.registration-card li {
-    margin-bottom: 10px;
+    display: inline-block;
 }
 
 /* Important Dates Section */
 #important-dates {
-    padding: 50px 0;
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+#important-dates ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#important-dates li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
 }
 
 /* Why Choose Us Section */
 #why-choose-us {
-    padding: 50px 0;
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#why-choose-us li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+#why-choose-us img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Facilities Section */
+#facilities {
+    background: #f4f9fd;
+    padding: 80px 0;
+}
+
+#facilities .section-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.facility-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.facility-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #e6f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.facility-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.facility-card h3 {
+    color: #0073e6;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.facility-card p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.facilities-highlight {
+    text-align: center;
+    padding: 30px;
+    background: #e6f2ff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.facilities-highlight p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0073e6;
+    color: #0073e6;
+}
+
+.btn-outline:hover {
+    background: #0073e6;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Call to Action */
@@ -139,50 +317,52 @@ header nav ul li a:hover {
     background: #0073e6;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
-.cta h2 {
-    font-size: 2em;
+#cta h2 {
+    color: white;
     margin-bottom: 20px;
 }
 
-.cta p {
+#cta h2:after {
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cta p {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
 
-.cta .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ffd740;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+#cta .btn {
+    background-color: white;
+    color: #0073e6;
+    border-color: white;
 }
 
-.cta .btn:hover {
-    background: #ffeb3b;
+#cta .btn:hover {
+    background-color: transparent;
+    color: white;
 }
 
 /* Contact Section */
 #contact {
-    padding: 50px 0;
+    background: #ffffff;
+    padding: 60px 0;
 }
 
 .contact-info {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-info img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
@@ -190,18 +370,145 @@ header nav ul li a:hover {
     flex-grow: 1;
 }
 
+.contact-info h3 {
+    margin-bottom: 5px;
+    color: #0073e6;
+}
+
 /* Footer */
 footer {
     background: #0073e6;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 footer .footer-logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    animation: slideDown 0.4s;
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #0073e6;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.modal h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.all-facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 992px) {
+    .all-facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .all-facilities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    header nav ul {
+        gap: 10px;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header .logo {
+        margin-bottom: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
 }
